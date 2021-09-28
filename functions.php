@@ -3,6 +3,8 @@
 
 include(__DIR__.'/includes/style.php');
 
+include(__DIR__.'/includes/scripts.php');
+
 include(__DIR__.'/includes/menu.php');
 
 include(__DIR__.'/includes/widgets.php');

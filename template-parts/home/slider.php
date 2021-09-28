@@ -1,6 +1,6 @@
 
 <?php if( have_rows('slider') ):?>
-<!--? slider Area Start -->
+<!--slider Area Start -->
         <div class="slider-area ">
             <div class="slider-active">
                 <?php while( have_rows('slider') ): the_row();
