@@ -10,7 +10,7 @@ wp_enqueue_script( 'popper', get_template_directory_uri() . '/assets/js/popper.m
 wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '1.0', true );;
 
 // Jquery Mobile Menu//
-wp_enqueue_script( 'jquery-slicknav', get_template_directory_uri() . '//assets/js/jquery.slicknav.min.js', array(), '1.0', true );;
+wp_enqueue_script( 'jquery-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js', array(), '1.0', true );;
 
 // Jquery Slick , Owl-Carousel Plugins //
 wp_enqueue_script( 'carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), '1.0', true );;

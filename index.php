@@ -17,31 +17,46 @@
 get_header();
 ?>
 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main">
-
-            <?php
-            if ( have_posts() ) {
-
-                // Load posts loop.
-                while ( have_posts() ) {
-                    the_post();
-                    get_template_part( 'template-parts/content/content' );
-                }
-
-                // Previous/next page navigation.
-                twentynineteen_the_posts_navigation();
-
-            } else {
-
-                // If no content, include the "No posts found" template.
-                get_template_part( 'template-parts/content/content', 'none' );
-
-            }
-            ?>
-
-        </main><!-- .site-main -->
-    </div><!-- .content-area -->
-
+    <main>
+    <!-- Hero Area Start-->
+    <div class="slider-area ">
+        <div class="single-slider slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2><?php single_post_title(); ?></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                        <?php
+                            if ( have_posts() ) {
+                                while ( have_posts() ) {
+                                    the_post();
+                                    get_template_part( 'template-parts/content/content' );
+                                }
+                             } else {
+                            echo wpautop( 'Постов для вывода не найдено.' );
+                                }
+                                ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            <?php get_sidebar(); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Blog Area =================-->
+    </main>
 <?php
-get_footer();
+get_footer(); ?>

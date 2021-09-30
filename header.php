@@ -1,12 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html lang="<?php language_attributes(); ?>">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <?php wp_head(); ?>
-
-
 </head>
 
 <body>
@@ -44,7 +42,6 @@
                                 'items_wrap'      => '<ul id="%1$s">%3$s</ul>',
                             )
                         );
-
                         ?>
                     </div>
                     <!-- Header Right -->
